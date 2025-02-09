@@ -1,6 +1,6 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  url: 'https://status.chiziingiin.top' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -15,25 +15,26 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: chiziingiin # unique identifier
+    name: www.chiziingiin.top
+    description: '记录学习与思考' # default=empty
+    url: 'https://www.chiziingiin.top' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: lingben-chiziingiin
+    name: 零本智协
+    description: '依托领先的多模型深度思考 AI 技术驱动力量，构建全面创新的市场项目解决方案体系，致力于让「零成本构建创新高效应用程序」成为现实。'
+    url: 'https://lingben.chiziingiin.top'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: lingben-chiziingiin-api
+    name: 零本智协API
+    url: 'https://lingben.chiziingiin.top/api/test'
     method: GET
     expectStatus: 200
+    linkable: false
